@@ -13,6 +13,5 @@ createRoot(document.getElementById("root")!).render(
         <Route path="test" element={<h1>hello the test is ok!</h1>} />
       </Route>
     </Routes>
-    <App />
   </BrowserRouter>
 );

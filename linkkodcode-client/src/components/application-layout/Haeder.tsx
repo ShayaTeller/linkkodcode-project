@@ -1,5 +1,6 @@
 import "../../styles/Header.css";
 
+// the header holds the slogen and the logo, all the time 
 export default function Header() {
   return (
     <>

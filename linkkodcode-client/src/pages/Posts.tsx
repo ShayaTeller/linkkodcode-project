@@ -1,6 +1,7 @@
 import Post from '../components/Post.tsx'
 import {posts} from '../utils/mockData.tsx'
 
+// this component run of a arrey that fill ehit posts objects
 export default function Posts() {
     const postslist = posts;
     return postslist.map((p,i)=>{

@@ -1,5 +1,5 @@
 import "../styles/Likes.css"
-
+// this component returnd the like elemnt that use in the post component
 export default function Likes({likes}:{likes:number[]}) {
     const likeslist = likes;
 
