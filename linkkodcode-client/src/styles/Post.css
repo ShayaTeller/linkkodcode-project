@@ -1,4 +1,5 @@
 .post-component {
+  justify-self: center;
   background-color: rgb(228, 243, 243);
   width: 250px;
   height: 300px;
@@ -11,25 +12,40 @@
 }
 
 .post-img {
-  width:100%;
+  position: relative;
+  width: 100%;
   height: 100%;
   grid-column: 1/4;
   grid-row: 1/2;
 }
 
 .post-description {
+    position: relative;
+
   align-content: center;
   text-align: center;
-  grid-column: 1/4;
-  height: 100%;
+  grid-column: 2/4;
+  height: 3em;
   grid-row: 2/3;
   background-color: rgb(195, 201, 207);
-  width: 100%;
+  width: 10em;
+}
+.post-date-time {
+    position: relative;
+
+  align-content: center;
+  text-align: center;
+  background-color: rgb(195, 201, 207);
+  grid-column: 1;
+  grid-row: 2/3;
+  width: 5em;
+  height: 3em;
 }
 
 .post-username {
-  align-content: center;
+    position: relative;
 
+  align-content: center;
   width: 100%;
   text-align: center;
   grid-row: 4;
