@@ -1,0 +1,29 @@
+.like-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row: 4;
+  grid-column: 1/2;
+  margin-left: 10px;
+  align-content: center;
+}
+.likes {
+  grid-row: 1;
+  grid-column: 1/3;
+  align-content: center;
+  text-align: center;
+}
+
+.like {
+    grid-column: 1;
+    grid-row: 2;
+  background-color: rgb(25, 220, 28);
+
+}
+
+.dislike {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: rgb(238, 61, 61);
+
+}

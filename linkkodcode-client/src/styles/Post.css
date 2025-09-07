@@ -1,0 +1,39 @@
+.post-component {
+  background-color: rgb(228, 243, 243);
+  width: 250px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 1%;
+  border: 1px solid rgb(195, 201, 207);
+}
+
+.post-img {
+  width:100%;
+  height: 100%;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.post-description {
+  align-content: center;
+  text-align: center;
+  grid-column: 1/4;
+  height: 100%;
+  grid-row: 2/3;
+  background-color: rgb(195, 201, 207);
+  width: 100%;
+}
+
+.post-username {
+  align-content: center;
+
+  width: 100%;
+  text-align: center;
+  grid-row: 4;
+  grid-column: 2/4;
+  justify-self: right;
+  /* margin-right: 10px; */
+}
