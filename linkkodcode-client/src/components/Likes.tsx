@@ -7,8 +7,7 @@ export default function Likes({likes}:{likes:number[]}) {
     <>
     <div className="like-component">
         <div className="likes">sum likes</div>
-        <button className="like"></button>
-        <button className="dislike"></button>
+        <button className="like">{likeslist[0]}</button>
 
     </div>
       

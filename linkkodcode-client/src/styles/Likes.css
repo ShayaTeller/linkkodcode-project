@@ -10,6 +10,8 @@
   align-content: center;
 }
 .likes {
+    position: relative;
+
   grid-row: 1;
   grid-column: 1/3;
   align-content: center;
@@ -17,13 +19,10 @@
 }
 
 .like {
+    position: relative;
+
   grid-column: 1;
   grid-row: 2;
   background-color: rgb(25, 220, 28);
 }
 
-.dislike {
-  grid-column: 2;
-  grid-row: 2;
-  background-color: rgb(238, 61, 61);
-}

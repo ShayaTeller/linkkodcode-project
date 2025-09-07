@@ -1,11 +1,11 @@
 .post-component {
-  justify-self: center;
-  background-color: rgb(228, 243, 243);
-  width: 250px;
-  height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  background-color: rgb(228, 243, 243);
+  width: 400PX;
+  height: 450PX;
   justify-items: center;
   padding: 1%;
   border: 1px solid rgb(195, 201, 207);

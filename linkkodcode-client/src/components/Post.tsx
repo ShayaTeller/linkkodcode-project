@@ -1,13 +1,13 @@
 import "../styles/Post.css"
 import Likes from "./Likes"
 
-export default function Post({imgurl,likes,description,username,id}:{imgurl:string,likes:object[],description:string,username:string,id:number}){
+export default function Post({imgurl,likes,description,username,id}:{imgurl:string,likes:number[],description:string,username:string,id:string}){
 
     const timenow = new Date();
     const time = timenow.getHours() + ":" + timenow.getMinutes() + ":" + timenow.getSeconds();
     const date = timenow.getDay() +"/" + timenow.getMonth()+"/"+timenow.getFullYear();
     return(<>
-    <div className="post-component" id={id.toString()}>
+    <div className="post-component" id={id}>
         <img className="post-img" src={imgurl} alt="post-img" />
         <Likes likes={likes} />
         <p className="post-description">{description}</p>
