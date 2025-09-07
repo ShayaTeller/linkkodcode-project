@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    background-color: rgb(12, 171, 176);
+
+}
