@@ -1,6 +1,7 @@
 import "../styles/Post.css"
 import Likes from "./Likes"
 
+// this returned a post (post-card) that take props and build a post =>return a post elemnt
 export default function Post({imgurl,likes,description,username,id}:{imgurl:string,likes:number[],description:string,username:string,id:string}){
 
     const timenow = new Date();
