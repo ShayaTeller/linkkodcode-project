@@ -14,6 +14,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage/>} />
             <Route path="test" element={<h1>hello the test is ok!</h1>} />
+            <Route path="/emptypostsdata" element={<h1>Oops, no posts, you might be posting!</h1>}/>
+            <Route path="loading" element={<p>loading the posts</p>}/>
           </Routes>
         </AppLayout>
       </BrowserRouter>
