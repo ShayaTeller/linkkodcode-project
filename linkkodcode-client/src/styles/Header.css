@@ -7,11 +7,13 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     border: 5px solid rgb(4, 10, 124);
+    justify-items: center;
 
 }
 
 .logo{
     grid-column: 6;
+    grid-row: 1/3;
     width: 100%;
     height: 11em;
     padding: 10px;
@@ -19,9 +21,26 @@
 }
 
 .slogen{
-    grid-column: 1/5;
-    margin-left: 10%;
+    grid-column: 1/6;
+    margin-left: 25%;
     font-size: 3rem;
     text-align: center;
 
 }
+
+.nav-bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  background-color: #ddd;
+  color: black;
+    border-radius: 20px;
+
+}
+
