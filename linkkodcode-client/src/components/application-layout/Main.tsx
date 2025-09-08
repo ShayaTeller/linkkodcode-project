@@ -4,9 +4,9 @@ import type { PropsWithChildren } from "react";
 export default function Main({children}:PropsWithChildren) {
   return (
     <>
-      <div className="main">
+      <main className="main">
         {children}
-      </div>
+      </main>
     </>
   );
 }

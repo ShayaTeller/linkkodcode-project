@@ -4,10 +4,10 @@ import "../../styles/Header.css";
 export default function Header() {
   return (
     <>
-      <div className="header">
+      <header className="header">
         <h1 className="slogen">this is the slogen</h1>
-        <img src="../../assets/imges/logo.jpeg"  alt="" className="logo" />
-      </div>
+        <img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBMtE5iOXV21OqYseQ7aKan9q2enkM37A8-Z9LSuEdQkGR9HlhSOfQwgEw5DxeX9X823VPfT4BeT7PELMGKLfFh4k55iOfPZKnX03M6NGSKLp7M=w1920-h988?auditContext=forDisplay"  alt="" className="logo" />
+      </header>
     </>
   );
 }

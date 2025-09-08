@@ -2,22 +2,24 @@
 .header{
     width: 100%;
     height: 100%;
-      /* object-fit: cover; */
-    background-color: blue;
+    overflow: hidden;
+    background-color: rgba(6, 6, 137, 0.316);
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    /* justify-content: right; */
+    border: 5px solid rgb(4, 10, 124);
 
 }
 
 .logo{
     grid-column: 6;
-    width: 100px;
-    height: 100px;    
+    width: 100%;
+    height: 11em;
+    padding: 10px;
+    padding-right: 20px;
 }
 
 .slogen{
-    grid-column: 1/4;
+    grid-column: 1/5;
     margin-left: 10%;
     font-size: 3rem;
     text-align: center;
