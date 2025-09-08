@@ -1,4 +1,4 @@
-.main{
+/* .main{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,4 +7,10 @@
     justify-self: center;
     background-color: rgb(12, 171, 176);
 
+} */
+
+.main {
+  background-color: #ddd;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
 }

@@ -1,20 +1,50 @@
-import "../styles/Post.css"
-import Likes from "./Likes"
+import "../styles/Post.css";
+import Likes from "./Likes";
+import { useState } from "react";
 
 // this returned a post (post-card) that take props and build a post =>return a post elemnt
-export default function Post({imgurl,likes,description,username,id}:{imgurl:string,likes:number[],description:string,username:string,id:string}){
+export default function Post({
+  imgurl,
+  likes,
+  description,
+  username,
+  time
+  
+}: {
+  imgurl: string;
+  likes: number;
+  description: string;
+  username: string;
+  time:string;
+}) {
 
-    const timenow = new Date();
-    const time = timenow.getHours() + ":" + timenow.getMinutes() + ":" + timenow.getSeconds();
-    const date = timenow.getDay() +"/" + timenow.getMonth()+"/"+timenow.getFullYear();
-    return(<>
-    <div className="post-component" id={id}>
-        <img className="post-img" src={imgurl} alt="post-img" />
-        <Likes likes={likes} />
-        <p className="post-description">{description}</p>
-        <p className="post-date-time">{time + "\n" + date}</p>
-        <p className="post-username">{username}</p>
-    </div>
+  const [likesstate, SetLikesState] = useState(likes);
+  const [toggel,setToggel] = useState(false);
+  const ToggelLike = () => {
+    if (!toggel) {
+      setToggel(true);
+      SetLikesState(likesstate+1)
+      return true;
+      
+    }
+    if(toggel){
+        setToggel(false)
+        SetLikesState(likesstate-1)
+        return false
+        
+    }
 
-    </>)
+    return ;
+  };
+
+  return (
+    <>
+      <img className="post-img" src={imgurl} alt="post-img" />
+      <Likes likesstate={likesstate} Like={ToggelLike} />
+      <p className="post-description">{description}</p>
+      <p>{`created_at: ${time}`}</p>
+      {/* <p className="post-date-time">{time.toDateString()}</p> */}
+      <p className="post-username">{username}</p>
+    </>
+  );
 }
