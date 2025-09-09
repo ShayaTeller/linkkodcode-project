@@ -9,18 +9,17 @@ configDotenv()
 
 const PORT = process.env.PORT
 const server = express();
+// use - to janerate any body to json type
 server.use(express.json());
+// allowes the brouser to get data from server
 server.use(cors({
     origin:'http://localhost:5173'
 
 }))
+// given the option to take coocikes from the requests
 server.use(cookieParser())
-server.get('/', function (req, res) {
-  // Cookies that have not been signed
-  console.log('Cookies: ', req.cookies)
-res.send("jjjjn")})
 
-
+// logger of all the requests
 server.use('/',(req,res,next)=>{
     console.log(req.method, req.url)
     next()
