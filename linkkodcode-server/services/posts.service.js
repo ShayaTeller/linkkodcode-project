@@ -1,9 +1,10 @@
 import { read, write } from "../dal/dal.js";
 import idcreator from "../utils/idcreator.js";
 
+const datapath ='public/mockData.json'
 export async function getPosts() {
   try {
-    const data = await read();
+    const data = await read(datapath);
     return data;
   } catch (error) {
     return error;
@@ -13,7 +14,7 @@ export async function getPosts() {
 export async function getOnePostById(id) {
   let result;
   try {
-    const datainfile = JSON.parse(await read());
+    const datainfile = JSON.parse(await read(datapath));
     datainfile.forEach((element) => {
       if (element.id == id) {
         result = element;
@@ -29,7 +30,7 @@ export async function getOnePostById(id) {
 export async function addNewPost(imgurl, likes, description, userNeme) {
     const timenow = new Date()
   try {
-    const datainfile = JSON.parse(await read());
+    const datainfile = JSON.parse(await read(datapath));
     const newPost = {
       imgurl: imgurl,
       likes: likes,
@@ -39,7 +40,7 @@ export async function addNewPost(imgurl, likes, description, userNeme) {
     };
     datainfile.push(newPost);
     const arrangeddata = idcreator(datainfile);
-    write(JSON.stringify(arrangeddata))
+    write(JSON.stringify(datapath,arrangeddata))
     return "Post received and saved successfully";
   } catch (error) {
     return "The save failed";
@@ -51,7 +52,7 @@ export async function addNewPost(imgurl, likes, description, userNeme) {
 export async function uptadePost(id, update) {
   try {
     const id = id;
-    const datainfile = JSON.parse(await read());
+    const datainfile = JSON.parse(await read(datapath));
     const newPost = {
       imgurl: update.imgurl,
       likes: update.likes,
@@ -73,7 +74,7 @@ export async function uptadePost(id, update) {
 
 
 export async function DeletePost(id) {
-    const datainfile = JSON.parse(await read());
+    const datainfile = JSON.parse(await read(datapath));
 datainfile.forEach((element) => {
       if (element.id == id) {
         element = null
