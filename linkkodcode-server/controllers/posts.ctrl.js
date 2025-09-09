@@ -13,8 +13,10 @@ export async function getPostById(req,res){
 
 
 export async function postNewPost(req) {
-    const post = req.body
-    return await addNewPost(post.imgurl,post.likes,post.description,post.username)
+    const post = await req.body;
+    console.log(post)
+    if(!post) return "no body!"
+        return await addNewPost(post.imgurl,post.likes,post.description,post.username)
  
 } 
 

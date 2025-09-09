@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Post from "../components/Post.tsx";
 import "../styles/posts.css";
 import { useNavigate } from "react-router";
+import Likes from "../components/Likes.tsx";
 // this component run of a arrey that fill ehit posts objects
 
-type PostType = {
+export type PostType = {
   id: number;
   imgurl: string;
   likes: number;
@@ -20,7 +21,6 @@ export default function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       const postslist = await fetch("http://localhost:3000/mockData.json");
-      console.log(await postslist);
       SetPostList(await postslist.json());
     };
     fetchPosts();
@@ -32,8 +32,15 @@ export default function Posts() {
         <div className="posts">
           {postslist.map((p) => {
             return (
-              <div key={p.id} className="post-component">
+              <div
+                key={p.id}
+                className="post-component"
+                onClick={() => {
+                  navigate(`/post/${p.id}` ,{state:{id:p.id,imgurl:p.imgurl,likes:p.likes,username:p.username,time:p.time}});
+                }}
+              >
                 <Post
+                  id={p.id}
                   imgurl={p.imgurl}
                   likes={p.likes}
                   description={p.description}
@@ -46,8 +53,8 @@ export default function Posts() {
         </div>
       );
     }
-    if(!postslist.length!){
-      navigate('/emptypostsdata')
+    if (!postslist.length!) {
+      navigate("/emptypostsdata");
     }
   }
 }
