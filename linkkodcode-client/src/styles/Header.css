@@ -44,3 +44,10 @@
 
 }
 
+
+.go-back{
+  border-radius: 20px;
+  background-color: gold;
+  grid-row: 1;
+  margin-top: 40px;
+}

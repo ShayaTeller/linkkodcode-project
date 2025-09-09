@@ -1,8 +1,11 @@
 import "../../styles/Header.css";
 import NavBar from "../NavBar";
+import { useNavigate } from "react-router";
 
 // the header holds the slogen and the logo, all the time
 export default function Header() {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className="header">
@@ -13,6 +16,7 @@ export default function Header() {
           className="logo"
         />
         <NavBar />
+        <button className="go-back" onClick={() => navigate(-1)}>Go Back</button>
       </header>
     </>
   );
