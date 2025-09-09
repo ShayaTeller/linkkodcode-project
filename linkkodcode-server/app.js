@@ -1,6 +1,8 @@
 import express from 'express'
 import { configDotenv } from 'dotenv'
 import router from './routes/posts.routes.js'
+import {router as userrouter  }from './routes/users.routes.js'
+
 import cors from 'cors'
 configDotenv()
 
@@ -21,6 +23,7 @@ server.use('/',(req,res,next)=>{
 
 server.use(express.static('public'))
 server.use('/',router)
+server.use(userrouter)
 
 
 server.listen(PORT,()=>{

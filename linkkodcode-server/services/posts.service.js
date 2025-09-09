@@ -25,6 +25,7 @@ export async function getOnePostById(id) {
   }
 }
 
+
 export async function addNewPost(imgurl, likes, description, userNeme) {
     const timenow = new Date()
   try {
