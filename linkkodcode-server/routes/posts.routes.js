@@ -12,7 +12,7 @@ router.get('/posts:id',async(req,res)=>{
 
 // you send in the body the new post in json
 router.post('/post',async(req,res)=>{
-    res.send(await postNewPost(req))
+    res.send(await postNewPost(req,res))
 
 })
 

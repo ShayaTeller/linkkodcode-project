@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Post from "../components/Post.tsx";
 import "../styles/posts.css";
 import { useNavigate } from "react-router";
-import Likes from "../components/Likes.tsx";
+
 // this component run of a arrey that fill ehit posts objects
 
 export type PostType = {
@@ -15,17 +15,36 @@ export type PostType = {
 };
 
 export default function Posts() {
-  const [postslist, SetPostList] = useState<PostType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const navigate = useNavigate();
+  const [postslist, SetPostList] = useState<PostType[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const postslist = await fetch("http://localhost:3000/mockData.json");
+      const postslist = await fetch("http://localhost:3000/posts");
       SetPostList(await postslist.json());
+
+      setTimeout(() => {
+        setIsLoading(false)
+        
+      }, 3000);
+      
     };
     fetchPosts();
   }, []);
 
+  if (isLoading) {
+    return (
+      <>
+      <div className="posts-loading">
+        <h1>loading the posts</h1>
+        <span className="loader"></span>
+
+      </div>
+      </>
+    );
+  }
   {
     if (postslist.length) {
       return (
@@ -36,7 +55,15 @@ export default function Posts() {
                 key={p.id}
                 className="post-component"
                 onClick={() => {
-                  navigate(`/post/${p.id}` ,{state:{id:p.id,imgurl:p.imgurl,likes:p.likes,username:p.username,time:p.time}});
+                  navigate(`/post/${p.id}`, {
+                    state: {
+                      id: p.id,
+                      imgurl: p.imgurl,
+                      likes: p.likes,
+                      username: p.username,
+                      time: p.time,
+                    },
+                  });
                 }}
               >
                 <Post

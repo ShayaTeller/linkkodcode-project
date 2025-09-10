@@ -1,5 +1,6 @@
 import e from "express";
 import { write,read } from "../dal/dal.js";
+import bcrypt from "bcryptjs";
 
 const datapath = "public/mockUsers.json";
 
@@ -13,13 +14,15 @@ export async function loginUser(username, password) {
         hashpassword = element.password;
       }
     });
-    const verify = bcrypt.compare(password, hashpassword);
-    if (verify) return true;
+    const verify =await bcrypt.compare(password, hashpassword);
+    if (verify==true) return true;
 
   } catch (error) {
-    return "dont veryfy";
+    return false;
   }
 }
+
+
 
 
 export async function AddUser(username, password, phone, email) {

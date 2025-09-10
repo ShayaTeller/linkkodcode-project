@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from "react";
+import '../../styles/Main.css'
 
 // the main component is the  Envelope of the render area of the application.
 export default function Main({children}:PropsWithChildren) {

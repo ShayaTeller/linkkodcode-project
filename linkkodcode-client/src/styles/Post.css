@@ -1,4 +1,4 @@
-.post-component {
+/* .post-component {
   overflow-y:hidden;
   overflow-x: hidden;
   display: grid;
@@ -12,6 +12,11 @@
   padding: 1%;
   border: 1px solid rgb(195, 201, 207);
 }
+
+
+
+
+
 
 .post-img {
   position: relative;
@@ -54,4 +59,44 @@
   grid-column: 2/4;
   justify-self: right;
   /* margin-right: 10px; */
+/* }  */
+
+
+.post-component {
+
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  background-color: rgb(198, 223, 247);
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 1%;
+  border: 2px solid blue;
+  border-radius: 15px;
+}
+
+.post-img {
+  width: 100%;
+  height:auto;
+  border-radius: 2%;
+}
+
+.like-component{
+  margin-right: 28em;
+
+}
+
+.post-username {
+
+}
+
+.post-description {
+  text-align: right;
+}
+
+.post-date-time {
+    text-align: left;
+    background-color: yellowgreen;
+
 }

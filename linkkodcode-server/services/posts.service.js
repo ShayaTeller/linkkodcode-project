@@ -40,10 +40,10 @@ export async function addNewPost(imgurl, likes, description, userNeme) {
     };
     datainfile.push(newPost);
     const arrangeddata = idcreator(datainfile);
-    write(JSON.stringify(datapath,arrangeddata))
-    return "Post received and saved successfully";
+    write(datapath,JSON.stringify(arrangeddata))
+    return {"message":"Post received and saved successfully"};
   } catch (error) {
-    return "The save failed";
+    return {"message":"The save failed"};
   }
 }
 
