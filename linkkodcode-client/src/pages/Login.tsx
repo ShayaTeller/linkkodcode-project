@@ -1,6 +1,7 @@
 import {  useContext, useRef } from "react";
 import { useNavigate } from "react-router";
 import {context} from '../contexts/store'
+import '../styles/Login.css'
 export default function Login() {
 
   const {setUser} = useContext(context)

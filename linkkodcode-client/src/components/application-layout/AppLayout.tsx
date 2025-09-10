@@ -1,4 +1,5 @@
 // import type { PropsWithChildren } from "react";
+import NavBar from "../NavBar";
 import Header from "./Haeder";
 import Main from "./Main";
 import type { PropsWithChildren } from "react";
@@ -18,6 +19,7 @@ export default function AppLayout({children}:PropsWithChildren) {
     <Header/>
  
     <Main>{children}</Main>
+    <NavBar/>
     </>
   );
 }

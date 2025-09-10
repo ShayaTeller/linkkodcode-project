@@ -1,53 +1,26 @@
-
-.header{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(6, 6, 137, 0.316);
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    border: 5px solid rgb(4, 10, 124);
-    justify-items: center;
-
-}
-
-.logo{
-    grid-column: 6;
-    grid-row: 1/3;
-    width: 100%;
-    height: 11em;
-    padding: 10px;
-    padding-right: 20px;
+.header {
+  grid-column: 1/10;
+  grid-row: 1;
+  background-color: rgb(165, 194, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .slogen{
-    grid-column: 1/6;
-    margin-left: 25%;
-    font-size: 3rem;
-    text-align: center;
-
-}
-
-.nav-bar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  width: 80%;
+  order: 1;
+  justify-content: right;
+  font-weight: 600;
 }
 
-.nav-bar a:hover {
-  background-color: #ddd;
-  color: black;
-    border-radius: 20px;
-
+.logo{
+  margin: 5px;
+  /* margin-right: 29%; */
+  width: 10%;
+  height: auto;
 }
 
 
-.go-back{
-  border-radius: 20px;
-  background-color: gold;
-  grid-row: 1;
-  margin-top: 40px;
-}

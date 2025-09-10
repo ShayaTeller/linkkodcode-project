@@ -1,0 +1,39 @@
+.one-post-component{
+    width: 70%;
+  max-width: 750px;
+  height: auto;
+  background-color: rgb(198, 223, 247);
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 1%;
+  border: 2px solid blue;
+  border-radius: 15px;
+
+}
+
+
+.post-img {
+  width: 100%;
+  height:auto;
+  border-radius: 2%;
+}
+
+.like-component{
+  margin-right: 28em;
+
+}
+
+.post-username {
+
+}
+
+.post-description {
+  text-align: right;
+}
+
+.post-date-time {
+    text-align: left;
+    background-color: yellowgreen;
+
+}

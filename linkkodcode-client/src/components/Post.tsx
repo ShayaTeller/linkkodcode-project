@@ -39,7 +39,7 @@ export default function Post({imgurl, likes, description, username, time}:PostTy
       <img className="post-img" src={imgurl} alt="post-img" />
       <Likes likesstate={likesstate} Like={ToggelLike} />
       <p className="post-description">{description}</p>
-      <p>{`created_at: ${time}`}</p>
+      <p className=".post-date-time">{`created_at: ${time}`}</p>
       {/* <p className="post-date-time">{time.toDateString()}</p> */}
       <p className="post-username">{username}</p>
     </>

@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 // import { useNavigate } from "react-router";
 import { useNavigate } from "react-router";
 import { context } from "../contexts/store";
+import '../App.css'
 export default function AddNewPost() {
   //   const navigate = useNavigate();
   const FormRef = useRef<HTMLFormElement>(null);

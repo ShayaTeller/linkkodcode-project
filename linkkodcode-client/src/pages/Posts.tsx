@@ -37,8 +37,11 @@ export default function Posts() {
   if (isLoading) {
     return (
       <>
+      <div className="posts-loading">
         <h1>loading the posts</h1>
         <span className="loader"></span>
+
+      </div>
       </>
     );
   }
