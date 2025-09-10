@@ -34,7 +34,7 @@ server.use('/',(req,res,next)=>{
 server.use(express.static('public'))
 
 server.use(userrouter)
-router.use('/',tokenVeryfayer)
+server.use('/',tokenVeryfayer)
 server.use('/',router)
 
 

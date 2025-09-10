@@ -26,11 +26,10 @@ export default function Login() {
 
     if(res.ok){
       const data =await res.json()
-      console.log(await data.username)
       setUser(await data.username)
       
-      // setUser(data)
-      navigate('/posts')
+      setUser(data)
+       navigate('/posts')
     }
     else{
       console.error("login filed")

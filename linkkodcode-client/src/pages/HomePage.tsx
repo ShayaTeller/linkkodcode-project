@@ -8,10 +8,11 @@ import Login from "./Login";
 // thid home paeg oldes the first page that the user see
 export default function HomePage({ children }: PropsWithChildren) {
   const { user } = useContext<IUserContext>(context);
+  console.log(user)
 
 
 
-    if (user.length != 0) {
+    // if (user.length != 0) {
       return (
         <>
           <div className="homepage">
@@ -19,12 +20,13 @@ export default function HomePage({ children }: PropsWithChildren) {
             {children}
           </div>
         </>
-      );
-    } else {
-      return (
-        <>
-          <Login />
-        </>
-      );
-    }
-}
+      // );
+    // } else {
+//       return (
+//         <>
+//           <Login />
+//         </>
+//       );
+//     }
+// }
+      )}

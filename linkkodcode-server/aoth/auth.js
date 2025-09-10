@@ -9,11 +9,11 @@ export async function auth(req, res) {
   let username;
   try {
     username = req.body.username;
-    //i create the coockie
+    //i create the cookie
     const token = await tokenCreator(username);
 
-    res.cookie("authToken", token, {
-      httpOnly: true,
+   res.cookie("authToken", token, {
+      httpOnly: false,
     });
 
   } catch (error) {
@@ -42,7 +42,8 @@ export async function tokenVeryfayer(req, res, next) {
   const token = req.cookies.authToken;
   console.log(token)
 
-  if (token) {
+  
+  if (token!=null|undefined) {
     // if token exsist = decoding the token
     const decoded = jwt.verify(token, secretKey);
     if (decoded) {
