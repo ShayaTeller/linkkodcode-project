@@ -6,21 +6,25 @@ const secretKey = process.env.JWT_SECRET;
 
 // new i send a token for the user
 export async function auth(req, res) {
+  let username;
   try {
-    const username = req.body.username;
-    console.log(username);
+    username = req.body.username;
     //i create the coockie
-    const token = await tokerCreator(username);
-    console.log(token);
+    const token = await tokenCreator(username);
+
     res.cookie("authToken", token, {
-      httpOnly: false,
+      httpOnly: true,
     });
-  } catch (error) {}
+
+  } catch (error) {
+    return res.status(401).send({"message":error})
+  }
+  return {"username":username,"message":'success'};
 }
 
 
 // this fn jenerate a token for user
-export async function tokerCreator(username) {
+export async function tokenCreator(username) {
   const payload = {
     username: username,
   };

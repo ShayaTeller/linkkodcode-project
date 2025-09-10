@@ -13,11 +13,14 @@ const server = express();
 server.use(express.json());
 // allowes the brouser to get data from server
 server.use(cors({
-    origin:'http://localhost:5173'
+    origin:'http://localhost:5173',
+    credentials:"include"
 
 }))
 // given the option to take coocikes from the requests
 server.use(cookieParser())
+
+
 
 // logger of all the requests
 server.use('/',(req,res,next)=>{
@@ -31,7 +34,7 @@ server.use('/',(req,res,next)=>{
 server.use(express.static('public'))
 
 server.use(userrouter)
-server.use('/',tokenVeryfayer)
+router.use('/',tokenVeryfayer)
 server.use('/',router)
 
 

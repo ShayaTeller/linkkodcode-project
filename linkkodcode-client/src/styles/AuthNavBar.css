@@ -1,0 +1,10 @@
+
+.auth-nav-bar {
+  grid-column: 1/7;
+  margin-bottom: 20px;
+  text-align: center;
+  color: aliceblue;
+  overflow: hidden;
+  background-color: #d7bcbc;
+  border-radius: 20px;
+}

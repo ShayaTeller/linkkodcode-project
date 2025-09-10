@@ -12,11 +12,11 @@ export async function getPostById(req,res){
 
 
 
-export async function postNewPost(req) {
+export async function postNewPost(req,res) {
     const post = await req.body;
     console.log(post)
     if(!post) return "no body!"
-        return await addNewPost(post.imgurl,post.likes,post.description,post.username)
+        res.send( await addNewPost(post.imgurl,post.likes,post.description,post.username));
  
 } 
 

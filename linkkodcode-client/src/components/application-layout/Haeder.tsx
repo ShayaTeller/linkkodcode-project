@@ -1,4 +1,5 @@
 import "../../styles/Header.css";
+import AuthNavBar from "../AuthNavBar";
 import NavBar from "../NavBar";
 import { useNavigate } from "react-router";
 
@@ -16,6 +17,7 @@ export default function Header() {
           className="logo"
         />
         <NavBar />
+        <AuthNavBar/>
         <button className="go-back" onClick={() => navigate(-1)}>Go Back</button>
       </header>
     </>

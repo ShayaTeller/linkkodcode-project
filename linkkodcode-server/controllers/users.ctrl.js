@@ -1,3 +1,4 @@
+import { auth } from "../aoth/auth.js";
 import { loginUser, AddUser } from "../services/users.service.js";
 import bcrypt from "bcryptjs";
 
@@ -14,8 +15,14 @@ export async function loginCtrl(req, res,next) {
   }
 
   const ok =  await loginUser(username, password);
-  if(ok){
-    return next()
+  if(ok===true){
+    console.log(ok)
+    console.log(req.url);
+    res.send(await auth(req,res))
+
+  }
+  else{
+    return  res.status(401).send({message:"wrong login"});
   }
 }
 
