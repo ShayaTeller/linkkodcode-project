@@ -1,2 +1,2 @@
-Hello, welcome to my Linkkodcode project,
-In the project I present fullstack development capabilities, end-to-end mini-application development, using innovative technologies on the client and server side,
+כבר היה לי רידמי , אבל כשעשיתי פול רקואסט אחרון זה נמחק כי הייתי פתוח עליו בגיט האב ולא שמרתי אותו, אני ידבר עם המפקד אם יש לי אישור להוסיף רידמי אחרי השעה 
+תודה רבה 
