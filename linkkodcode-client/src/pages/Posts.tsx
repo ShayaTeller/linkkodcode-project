@@ -22,7 +22,9 @@ export default function Posts() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const postslist = await fetch("http://localhost:3000/posts");
+      const postslist = await fetch("http://localhost:3000/posts",{
+        credentials:'include'
+      });
       SetPostList(await postslist.json());
 
       setTimeout(() => {

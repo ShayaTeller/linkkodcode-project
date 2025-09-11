@@ -1,10 +1,9 @@
-import {  useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import { useNavigate } from "react-router";
-import {context} from '../contexts/store'
-import '../styles/Login.css'
+import { context } from "../contexts/store";
+import "../styles/Login.css";
 export default function Login() {
-
-  const {setUser} = useContext(context)
+  const { setUser } = useContext(context);
 
   const navigate = useNavigate();
 
@@ -18,21 +17,22 @@ export default function Login() {
       password: formdata.get("password"),
     };
 
-    const res  = await fetch("http://localhost:3000/login", {
+    const res = await fetch("http://localhost:3000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
+      credentials: "include",
     });
+    
 
-    if(res.ok){
-      const data =await res.json()
-      setUser(await data.username)
-      
-      setUser(data)
+    if (res.ok) {
+      const data = await res.json();
+      debugger
+      setUser(await data.username);
+      console.log(data);
        navigate('/posts')
-    }
-    else{
-      console.error("login filed")
+    } else {
+      console.error("login filed");
     }
   };
 
@@ -65,4 +65,3 @@ export default function Login() {
     </>
   );
 }
-

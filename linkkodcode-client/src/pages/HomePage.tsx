@@ -12,7 +12,7 @@ export default function HomePage({ children }: PropsWithChildren) {
 
 
 
-    // if (user.length != 0) {
+    if (user.length != 0) {
       return (
         <>
           <div className="homepage">
@@ -20,13 +20,13 @@ export default function HomePage({ children }: PropsWithChildren) {
             {children}
           </div>
         </>
-      // );
-    // } else {
-//       return (
-//         <>
-//           <Login />
-//         </>
-//       );
-//     }
-// }
-      )}
+      );
+    } else {
+      return (
+        <>
+          <Login />
+        </>
+      );
+    }
+}
+    
