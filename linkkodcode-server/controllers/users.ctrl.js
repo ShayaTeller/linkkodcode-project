@@ -16,7 +16,7 @@ export async function loginCtrl(req, res,next) {
 
   const ok =  await loginUser(username, password);
   if(ok===true){
-    res.send(await auth(req,res))
+    return await auth(req,res)
 
   }
   else{
